@@ -24,7 +24,7 @@ public class SalaController {
     
     @Autowired
     private  SessaoDao sessaoDao;
-
+    
     @GetMapping({"/admin/sala", "/admin/sala/{id}"})
     public ModelAndView form(@PathVariable("id")Optional<Integer> id, Sala sala){
         ModelAndView modelAndView = new ModelAndView("sala/sala");
