@@ -2,6 +2,7 @@ package br.caelum.ingesso.validacao;
 
 import static org.junit.Assert.fail;
 
+import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Arrays;
@@ -27,8 +28,8 @@ public class GerenciadorDeSessaoTest {
 	
 	@Before
 	public void preparaSessoes() {
-		this.rogueOne = new Filme("Rogue One", Duration.ofMinutes(120), "Sci-Fi");
-		this.sala3d = new Sala("Sala 3D");
+		this.rogueOne = new Filme("Rogue One", Duration.ofMinutes(120), "Sci-Fi", BigDecimal.TEN);
+		this.sala3d = new Sala("Sala 3D", BigDecimal.TEN);
 		
 		this.sessaoDas10 = new Sessao(LocalTime.parse("10:00:00"), sala3d, rogueOne);
 		this.sessaoDas12 = new Sessao(LocalTime.parse("12:00:00"), sala3d, rogueOne);
