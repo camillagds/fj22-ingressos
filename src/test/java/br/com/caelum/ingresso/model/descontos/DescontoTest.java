@@ -13,14 +13,44 @@ import br.com.caelum.ingresso.model.Sala;
 import br.com.caelum.ingresso.model.Sessao;
 
 public class DescontoTest {
+
+	@Test
+	public void deveConcederDescontoDe30PorcentoParaIngressosDeClientesDeBancos() {
+
+		Sala sala = new Sala("Eldorado - IMAX", new BigDecimal("20.5"));
+		Filme filme = new Filme("Rogue One", Duration.ofMinutes(120), "SCI-FI", new BigDecimal("12"));
+		Sessao sessao = new Sessao(LocalTime.parse("10:00:00"), sala, filme);
+		Ingresso ingresso = new Ingresso(sessao, new DescontoParaBancos());
+
+		BigDecimal precoEsperado = new BigDecimal("22.75");
+
+		Assert.assertEquals(precoEsperado, ingresso.getPreco());
+
+	}
+
+	@Test
+	public void deveConcederDescontoDe50PorcentoParaIngressoDeEstudante() {
+
+		Sala sala = new Sala("Eldorado - IMAX", new BigDecimal("20.5"));
+		Filme filme = new Filme("Rogue One", Duration.ofMinutes(120), "SCI-FI", new BigDecimal("12"));
+		Sessao sessao = new Sessao(LocalTime.parse("10:00:00"), sala, filme);
+		Ingresso ingresso = new Ingresso(sessao, new DescontoParaEstudantes());
+
+		BigDecimal precoEsperado = new BigDecimal("16.25");
+
+		Assert.assertEquals(precoEsperado, ingresso.getPreco());
+
+	}
+
 	@Test
 	public void naoDeveConcederDescontoParaIngressoNormal() {
 		Sala sala = new Sala("Eldorado - IMax", new BigDecimal("20.5"));
 		Filme filme = new Filme("Rogue One", Duration.ofMinutes(120), "SCI-FI", new BigDecimal("12.0"));
 		Sessao sessao = new Sessao(LocalTime.parse("10:00:00"), sala, filme);
 		Ingresso ingresso = new Ingresso(sessao, new SemDesconto());
-		
+
 		BigDecimal precoesperado = new BigDecimal("32.50");
-		
-		Assert.assertEquals(precoesperado, ingresso.getPreco());	}
+
+		Assert.assertEquals(precoesperado, ingresso.getPreco());
+	}
 }
