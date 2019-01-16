@@ -5,8 +5,14 @@ import java.math.BigDecimal;
 public class SemDesconto implements Desconto{
 
 	@Override
-	public BigDecimal aplicarDescontosobre(BigDecimal precoOriginal) {
+	public BigDecimal aplicarDescontoSobre(BigDecimal precoOriginal) {
 		// TODO Auto-generated method stub
 		return precoOriginal;
+	}
+
+	@Override
+	public String getDescricao() {
+		// TODO Auto-generated method stub
+		return "Normal";
 	}
 }

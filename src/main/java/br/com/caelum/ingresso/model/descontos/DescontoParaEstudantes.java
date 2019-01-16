@@ -5,8 +5,14 @@ import java.math.BigDecimal;
 public class DescontoParaEstudantes implements Desconto{
 
 	@Override
-	public BigDecimal aplicarDescontosobre(BigDecimal precoOriginal) {
+	public BigDecimal aplicarDescontoSobre(BigDecimal precoOriginal) {
 		// TODO Auto-generated method stub
 		return precoOriginal.divide(new BigDecimal("2.0"));
+	}
+
+	@Override
+	public String getDescricao() {
+		// TODO Auto-generated method stub
+		return "Desconto para estudantes";
 	}
 }

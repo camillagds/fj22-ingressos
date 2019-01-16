@@ -5,12 +5,18 @@ import java.math.BigDecimal;
 public class DescontoParaBancos implements Desconto{
 
 	@Override
-	public BigDecimal aplicarDescontosobre(BigDecimal precoOriginal) {
+	public BigDecimal aplicarDescontoSobre(BigDecimal precoOriginal) {
 		// TODO Auto-generated method stub
 		return precoOriginal.subtract(trintaPorCentoSobre(precoOriginal));
 	}
 	
 	private BigDecimal trintaPorCentoSobre(BigDecimal precoOriginal) {
 		return precoOriginal.multiply(new BigDecimal("0.3"));
+	}
+
+	@Override
+	public String getDescricao() {
+		// TODO Auto-generated method stub
+		return "Desconto para correntistas do Banco X";
 	}
 }
