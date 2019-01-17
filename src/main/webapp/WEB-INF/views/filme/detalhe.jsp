@@ -24,23 +24,23 @@
 	        </div>
 	
 	        <div>
-	            <label for="diretores">Diretores</label>
-	            <span id="diretores">${detalhes.diretores}</span>
+	            <label for="direcao">Direção</label>
+	            <span id="direcao">${detalhes.direcao}</span>
 	        </div>
 	
 	        <div>
-	            <label for="escritores">Escritores</label>
-	            <span id="escritores">${detalhes.escritores}</span>
+	            <label for="redacao">Redação</label>
+	            <span id="redacao">${detalhes.redacao}</span>
 	        </div>
 	
 	        <div>
-	            <label for="atores">Atores</label>
-	            <span id="atores">${detalhes.atores}</span>
+	            <label for="elenco">Elenco</label>
+	            <span id="elenco">${detalhes.elenco}</span>
 	        </div>
 	
 	        <div>
-	            <label for="descricao">Descrição</label>
-	            <span id="descricao">${detalhes.descricao}</span>
+	            <label for="sinopse">Sinopse</label>
+	            <span id="sinopse">${detalhes.sinopse}</span>
 	        </div>
 	
 	        <div>

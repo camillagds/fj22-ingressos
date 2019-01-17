@@ -20,14 +20,6 @@ public class Ingresso {
 	
 	@ManyToOne
 	private Sessao sessao;
-	
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	@ManyToOne
 	private Lugar lugar;
@@ -56,6 +48,17 @@ public class Ingresso {
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}
+
+
+	public Integer getId() {
+		return id;
+	}
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 
 	public Sessao getSessao() {
 		return sessao;

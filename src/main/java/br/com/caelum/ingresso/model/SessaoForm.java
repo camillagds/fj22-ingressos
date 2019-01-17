@@ -18,7 +18,6 @@ public class SessaoForm {
 	@DateTimeFormat(pattern="HH:mm")
 	@NotNull
 	private LocalTime horario;
-
 	@NotNull
 	private Integer filmeId;
 	

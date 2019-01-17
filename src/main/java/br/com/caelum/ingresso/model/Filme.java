@@ -17,8 +17,11 @@ public class Filme {
     @Id
     @GeneratedValue
     private Integer id;
+    
     private String nome;
+    
     private Duration duracao;
+    
     private String genero;
     private BigDecimal preco;
     
