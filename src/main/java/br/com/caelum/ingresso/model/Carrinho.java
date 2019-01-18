@@ -34,5 +34,10 @@ public class Carrinho {
 	public List<Ingresso> getIngressos() {
 		return ingressos;
 	}
+	
+	 public Compra toCompra(){
+	     return  new Compra(ingressos);
+	 }
+
 
 }

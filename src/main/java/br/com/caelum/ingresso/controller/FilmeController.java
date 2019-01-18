@@ -5,7 +5,7 @@ import br.com.caelum.ingresso.dao.SessaoDao;
 import br.com.caelum.ingresso.model.DetalhesDoFilme;
 import br.com.caelum.ingresso.model.Filme;
 import br.com.caelum.ingresso.model.Sessao;
-import br.com.caelum.ingresso.rest.ImdbClient;
+import br.com.caelum.ingresso.rest.OmdbClient;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,7 +35,7 @@ public class FilmeController {
     @Autowired
     private SessaoDao sessaoDao;
     @Autowired
-    private ImdbClient client;
+    private OmdbClient client;
 
     @GetMapping({"/admin/filme", "/admin/filme/{id}"})
     public ModelAndView form(@PathVariable("id") Optional<Integer> id, Filme filme){

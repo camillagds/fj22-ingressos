@@ -13,16 +13,16 @@ public class DetalhesDoFilme {
     private String  imagem;
 
     @JsonProperty("Director")
-    private String diretores;
+    private String direcao;
 
     @JsonProperty("Writer")
-    private String escritores;
+    private String redacao;
 
     @JsonProperty("Actors")
-    private String atores;
+    private String elenco;
 
     @JsonProperty("Plot")
-    private String descricao;
+    private String sinopse;
 
     @JsonProperty("imdbRating")
     private Double avaliacao;
@@ -51,36 +51,36 @@ public class DetalhesDoFilme {
 		this.imagem = imagem;
 	}
 
-	public String getDiretores() {
-		return diretores;
+	public String getDirecao() {
+		return direcao;
 	}
 
-	public void setDiretores(String diretores) {
-		this.diretores = diretores;
+	public void setDirecao(String diretor) {
+		this.direcao = diretor;
 	}
 
-	public String getEscritores() {
-		return escritores;
+	public String getRedacao() {
+		return redacao;
 	}
 
-	public void setEscritores(String escritores) {
-		this.escritores = escritores;
+	public void setRedacao(String redacao) {
+		this.redacao = redacao;
 	}
 
-	public String getAtores() {
-		return atores;
+	public String getElenco() {
+		return elenco;
 	}
 
-	public void setAtores(String atores) {
-		this.atores = atores;
+	public void setElenco(String elenco) {
+		this.elenco = elenco;
 	}
 
-	public String getDescricao() {
-		return descricao;
+	public String getSinopse() {
+		return sinopse;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setSinopse(String sinopse) {
+		this.sinopse = sinopse;
 	}
 
 	public Double getAvaliacao() {
