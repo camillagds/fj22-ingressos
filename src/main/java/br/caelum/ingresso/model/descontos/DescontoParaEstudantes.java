@@ -1,4 +1,4 @@
-package br.caelum.ingesso.model.descontos;
+package br.caelum.ingresso.model.descontos;
 
 import java.math.BigDecimal;
 
